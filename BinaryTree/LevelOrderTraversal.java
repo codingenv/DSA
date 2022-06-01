@@ -3,7 +3,7 @@ package com.practice.binary.tree;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class LavelOrderTraversal {
+public class LevelOrderTraversal {
 
     public static void main(String args[]){
         Node node = new Node();
