@@ -1,0 +1,45 @@
+package com.practice.binary;
+
+public class BinaryTreeToDoublyLinkedList {
+    Node root = Node.getBinaryTree();
+    Node head;
+    static Node prev = null;
+
+
+    public static void main(String [] args){
+        BinaryTreeToDoublyLinkedList obj = new BinaryTreeToDoublyLinkedList();
+
+        obj.binaryTreeToDoublyLinkedList(obj.root);
+
+        obj.printdoublyLinkedList(obj.head);
+    }
+
+    public void binaryTreeToDoublyLinkedList(Node root){
+        if(root == null){
+            return;
+        }
+
+        binaryTreeToDoublyLinkedList(root.left);
+
+        if(prev == null)
+        {
+            head = root;
+        }
+        else{
+            root.left = prev;
+            prev.right = root;
+        }
+        prev = root;
+
+        binaryTreeToDoublyLinkedList(root.right);
+    }
+
+    void printdoublyLinkedList(Node node)
+    {
+        while (node != null)
+        {
+            System.out.print(node.data + " ");
+            node = node.right;
+        }
+    }
+}

@@ -33,4 +33,15 @@ public class Node {
 
         return root;
     }
+
+    public static Node getBinaryTree(){
+        Node tree = new Node();
+        tree = new Node(10);
+        tree.left = new Node(12);
+        tree.right = new Node(15);
+        tree.left.left = new Node(25);
+        tree.left.right = new Node(30);
+        tree.right.left = new Node(36);
+        return tree;
+    }
 }
