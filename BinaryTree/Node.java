@@ -1,4 +1,4 @@
-package com.practice.binary.tree;
+package com.practice.binary;
 
 public class Node {
     int data;
@@ -19,6 +19,16 @@ public class Node {
         root.left = new Node(6);
         root.left.left = new Node(8);
         root.left.right = new Node(9);
+        root.right = new Node(7);
+
+        return root;
+    }
+
+    public Node getRandomCreatedTree2(){
+        Node root = new Node(5);
+        root.left = new Node(6);
+        root.left.left = new Node(8);
+        root.left.right = new Node(23);
         root.right = new Node(7);
 
         return root;
