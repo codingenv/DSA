@@ -3,8 +3,21 @@ package com.practice.binary;
 public class BinaryTreeToDoublyLinkedList {
     Node root = Node.getBinaryTree();
     Node head;
+
+    /*
+     Initialize previously visited node as NULL. This is
+     static so that the same value is accessible in all recursive
+     calls
+     */
     static Node prev = null;
 
+
+    /*
+    The idea is to do in order traversal of the binary tree.
+    While doing inorder traversal, keep track of the previously
+    visited node in a variable, say prev. For every visited node,
+    make it next to the prev and previous of this node as prev.
+     */
 
     public static void main(String [] args){
         BinaryTreeToDoublyLinkedList obj = new BinaryTreeToDoublyLinkedList();
