@@ -44,4 +44,39 @@ public class Node {
         tree.right.left = new Node(36);
         return tree;
     }
+
+    //Inorder Traversal ( left, root, right)
+    public static void inOrderTraversal(Node node){
+        if(node == null)
+        {
+            return;
+        }
+
+        inOrderTraversal(node.left);
+        System.out.print(node.data + " ");
+        inOrderTraversal(node.right);
+    }
+
+    //Pre Order Traversal (root, left, right)
+    public static void PreOrderTraversal(Node node){
+        if(node == null)
+        {
+            return;
+        }
+
+        System.out.print(node.data + " ");
+        inOrderTraversal(node.left);
+        inOrderTraversal(node.right);
+    }
+
+    // Post order Traversal (left, right, root)
+    public static void PostOrderTraversal(Node node){
+        if(node == null)
+        {
+            return;
+        }
+        inOrderTraversal(node.left);
+        inOrderTraversal(node.right);
+        System.out.print(node.data + " ");
+    }
 }
