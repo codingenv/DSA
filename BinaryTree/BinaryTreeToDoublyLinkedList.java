@@ -1,5 +1,22 @@
 package com.practice.binary;
 
+
+/*
+Tree
+            10
+        /         \
+     12              15
+    /   \           /
+ 25       30     36
+
+ Doubly Linked List:
+25, 12, 30, 10, 36, 15
+
+
+ */
+
+
+
 public class BinaryTreeToDoublyLinkedList {
     Node root = Node.getBinaryTree();
     Node head;
