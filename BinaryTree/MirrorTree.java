@@ -34,20 +34,19 @@ public class MirrorTree {
         Node.inOrderTraversal(root);
     }
 
-    public static void mirrorTree(Node node){
+    public static Node mirrorTree(Node node){
         if(node == null){
-            return;
+            return node;
         }
+        // Call the left tree and right tree alternatively
+        Node left = mirrorTree(node.left);
+        Node right = mirrorTree(node.right);
 
         // Swap the left Node with right node
+        node.left = right;
+        node.right = left;
 
-        Node temp = node.left;
-        node.left = node.right;
-        node.right = temp;
-
-        // Call the left tree and right tree alternatively
-        mirrorTree(node.left);
-        mirrorTree(node.right);
+        return node;
     }
 
 
