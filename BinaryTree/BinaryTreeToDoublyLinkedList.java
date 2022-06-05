@@ -1,6 +1,7 @@
 package com.practice.binary;
 
 
+<<<<<<< HEAD
 /*
 Tree
             10
@@ -16,6 +17,8 @@ Tree
  */
 
 
+=======
+>>>>>>> 905c9766840a8fa4af74af6740c09d56512dcf7b
 
 public class BinaryTreeToDoublyLinkedList {
     Node root = Node.getBinaryTree();
