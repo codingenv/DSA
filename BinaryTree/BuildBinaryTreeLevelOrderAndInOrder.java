@@ -5,7 +5,6 @@ import java.util.Map;
 
 public class BuildBinaryTreeLevelOrderAndInOrder {
 
-
     public Node buildBinaryTreeSolution(int []levelOrder, int []inOrder){
         Map<Integer,Integer> inmap = new HashMap<>();
         for(int i = 0; i< inOrder.length ;i++){
