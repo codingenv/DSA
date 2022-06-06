@@ -11,6 +11,7 @@ public class Node {
         left = null;
         right = null;
     }
+	//Default Constructor
     public Node(){}
 
 
