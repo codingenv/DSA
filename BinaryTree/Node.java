@@ -2,15 +2,30 @@ package com.practice.binary;
 
 public class Node {
     int data;
+    char charData;
+    String stringData;
     Node left;
     Node right;
 
     public Node(int item)
     {
-        data = item;
-        left = null;
-        right = null;
+        this.data = item;
+        this.left = null;
+        this.right = null;
     }
+
+    public Node(char item){
+        this.charData = item;
+        this.left = null;
+        this.right = null;
+    }
+
+    public Node(String item){
+        this.stringData = item;
+        this.left = null;
+        this.right = null;
+    }
+
     public Node(){}
 
 
@@ -51,7 +66,6 @@ public class Node {
         {
             return;
         }
-
         inOrderTraversal(node.left);
         System.out.print(node.data + " ");
         inOrderTraversal(node.right);
@@ -63,7 +77,6 @@ public class Node {
         {
             return;
         }
-
         System.out.print(node.data + " ");
         PreOrderTraversal(node.left);
         PreOrderTraversal(node.right);
@@ -78,5 +91,71 @@ public class Node {
         PostOrderTraversal(node.left);
         PostOrderTraversal(node.right);
         System.out.print(node.data + " ");
+    }
+
+    //Inorder Traversal ( left, root, right)
+    public static void inOrderTraversalForCharData(Node node){
+        if(node == null)
+        {
+            return;
+        }
+        inOrderTraversalForCharData(node.left);
+        System.out.print(node.charData + " ");
+        inOrderTraversalForCharData(node.right);
+    }
+
+    //Pre Order Traversal (root, left, right)
+    public static void PreOrderTraversalForCharData(Node node){
+        if(node == null)
+        {
+            return;
+        }
+        System.out.print(node.charData + " ");
+        PreOrderTraversalForCharData(node.left);
+        PreOrderTraversalForCharData(node.right);
+    }
+
+    // Post order Traversal (left, right, root)
+    public static void PostOrderTraversalForCharData(Node node){
+        if(node == null)
+        {
+            return;
+        }
+        PostOrderTraversalForCharData(node.left);
+        PostOrderTraversalForCharData(node.right);
+        System.out.print(node.charData + " ");
+    }
+
+    //Inorder Traversal ( left, root, right)
+    public static void inOrderTraversalForStringData(Node node){
+        if(node == null)
+        {
+            return;
+        }
+        inOrderTraversalForStringData(node.left);
+        System.out.print(node.stringData + " ");
+        inOrderTraversalForStringData(node.right);
+    }
+
+    //Pre Order Traversal (root, left, right)
+    public static void PreOrderTraversalForStringData(Node node){
+        if(node == null)
+        {
+            return;
+        }
+        System.out.print(node.stringData + " ");
+        PreOrderTraversalForStringData(node.left);
+        PreOrderTraversalForStringData(node.right);
+    }
+
+    // Post order Traversal (left, right, root)
+    public static void PostOrderTraversalForStringData(Node node){
+        if(node == null)
+        {
+            return;
+        }
+        PostOrderTraversalForStringData(node.left);
+        PostOrderTraversalForStringData(node.right);
+        System.out.print(node.stringData + " ");
     }
 }
