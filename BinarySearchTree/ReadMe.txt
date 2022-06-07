@@ -21,3 +21,9 @@ Binary Search Tree is a node-based binary tree data structure which has the foll
 					         /  \        /
 							4    7      13
 							
+							
+							
+Programs
+============
+EASY:
+	1. Count the nodes of a BST for a given range. CountNodesInRange.java
