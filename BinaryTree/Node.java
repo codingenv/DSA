@@ -11,7 +11,6 @@ public class Node {
         left = null;
         right = null;
     }
-	//Default Constructor
     public Node(){}
 
 
@@ -66,8 +65,8 @@ public class Node {
         }
 
         System.out.print(node.data + " ");
-        inOrderTraversal(node.left);
-        inOrderTraversal(node.right);
+        PreOrderTraversal(node.left);
+        PreOrderTraversal(node.right);
     }
 
     // Post order Traversal (left, right, root)
@@ -76,8 +75,8 @@ public class Node {
         {
             return;
         }
-        inOrderTraversal(node.left);
-        inOrderTraversal(node.right);
+        PostOrderTraversal(node.left);
+        PostOrderTraversal(node.right);
         System.out.print(node.data + " ");
     }
 }
