@@ -8,7 +8,6 @@ public class Node {
     Node right;
 	
 	
-
     public Node(int item)
     {
         this.data = item;
