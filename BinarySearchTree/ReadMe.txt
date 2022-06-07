@@ -14,12 +14,12 @@ Binary Search Tree is a node-based binary tree data structure which has the foll
 	Example
 	
                                 8
-							/        \
-						   3          10
-						/    \          \
-                       1      6          14
-					         /  \        /
-							4    7      13
+                             /     \
+                            3        10
+                         /    \          \
+                        1      6          14
+                             /  \        /
+                            4    7      13
 							
 							
 							
