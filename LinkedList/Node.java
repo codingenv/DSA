@@ -37,6 +37,32 @@ public class Node {
         return head;
     }
 
+    public static Node addAtBeginingofListList(Node head, int data){
+        if(head == null){
+            head = new Node(data);
+        } else {
+            Node newNode = new Node(data);
+            newNode.next = head;
+            head = newNode;
+        }
+        return head;
+    }
+
+    public static Node addAtEndOfLinkedList(Node head, int data){
+        if(head == null){
+            head = new Node(data);
+            return head;
+        }else{
+            Node temp = head;
+            while(temp.next != null){
+                temp = temp.next;
+            }
+            Node newNode = new Node(data);
+            temp.next = newNode;
+            return head;
+        }
+    }
+
 
 
 }
