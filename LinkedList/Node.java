@@ -19,9 +19,10 @@ public class Node {
     // Basic opertation
 
     public static void printLinkedList(Node node){
-        System.out.println();
+        System.out.println("Printing given linked list");
         while ( node != null){
             System.out.print(node.data + " ");
+            node = node.next;
         }
         System.out.println();
     }
