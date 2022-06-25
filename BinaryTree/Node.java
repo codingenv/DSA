@@ -1,5 +1,8 @@
 package com.practice.binary;
 
+/*
+Contains the basic method to create, display the tree.
+*/
 public class Node {
     int data;
     char charData;
