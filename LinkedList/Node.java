@@ -88,5 +88,19 @@ public class Node {
     }
 
 
+    public static Node [] getIntersectLinkedList(){
+        Node head1 = new Node(1);
+        head1.next = new Node(2);
+        head1.next.next = new Node(3);
+        head1.next.next.next = new Node(4);
+        Node head2 = new Node(10);
+        head2.next = new Node(18);
+        head2.next.next = head1.next.next;
+
+        Node [] arr  = {head1, head2};
+        return arr;
+    }
+
+
 
 }
