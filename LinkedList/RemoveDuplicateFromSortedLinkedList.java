@@ -8,6 +8,12 @@ public class RemoveDuplicateFromSortedLinkedList {
         System.out.println("After removing duplicates");
         removeDuplicates(head);
         Node.printLinkedList(head);
+
+
+        head = Node.convertArrayToLinkedList(arr);
+        System.out.println("After removing duplicates recursively");
+        removeDuplicatesRecursively(head);
+        Node.printLinkedList(head);
     }
 
     public static void removeDuplicates(Node head){
@@ -20,5 +26,18 @@ public class RemoveDuplicateFromSortedLinkedList {
             temp1.next = temp2;
             temp1 = temp1.next;
         }
+    }
+
+    public static Node removeDuplicatesRecursively(Node head){
+        if(head == null){
+            return head;
+        }
+
+        head.next = removeDuplicatesRecursively(head.next);
+        if(head.next != null && head.next.data == head.data){
+            Node res = head.next;
+            return res;
+        }
+        return head;
     }
 }
