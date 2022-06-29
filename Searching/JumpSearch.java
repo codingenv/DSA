@@ -1,5 +1,11 @@
 package com.searching;
 
+/*
+    ideal block size should be  = sqrt of (length of array)
+    Time complexity will be O(sqrt(n))
+    Auxiliary Space : O(1)
+    Works only with sorted array
+ */
 public class JumpSearch {
     public static void main(String args[]){
         int arr[] = {0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610};
@@ -34,6 +40,5 @@ public class JumpSearch {
             i++;
         }
         return -1;
-
     }
 }
