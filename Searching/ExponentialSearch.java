@@ -34,6 +34,8 @@ public class ExponentialSearch {
                 break;
             }
         }
+        // Why the start index is i/2?
+        // because we could not find a greater value in previous iteration
         return BinarySearch.binarySearch(arr,i/2, Math.min(i, len-1), key);
 
     }
