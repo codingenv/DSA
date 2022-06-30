@@ -17,9 +17,7 @@ public class BubbleSort {
             for(int j = i +1; j< len; j++){
                 if(arr[i] > arr[j]){
                     // swap the numbers;
-                    int temp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = temp;
+                    ArrayHelperClass.swap(arr, i, j);
                 }
             }
         }
