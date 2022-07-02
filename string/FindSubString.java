@@ -1,5 +1,9 @@
 package com.string;
 
+/*
+Finding sub string in a given string in time complexity 
+of O(n).
+*/
 public class FindSubString {
     public static void main (String[] args) {
         String s1 = "This is a test text.";
