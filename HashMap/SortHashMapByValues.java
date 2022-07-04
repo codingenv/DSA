@@ -4,6 +4,10 @@ import com.GeneralUtils.Utility;
 
 import java.util.*;
 
+/* 
+	Sorting a hashamap based on values
+*/
+
 public class SortHashMapByValues {
     public static final boolean ASC = true;
     public static final boolean DESC = false;
