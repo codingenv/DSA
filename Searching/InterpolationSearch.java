@@ -1,4 +1,4 @@
-package com.searching;
+package Searching;
 
 
 /*

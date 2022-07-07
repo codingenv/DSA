@@ -1,4 +1,4 @@
-package com.sorting;
+package Sorting;
 
 public class ArrayHelperClass {
     public static void printArray(int[] arr){

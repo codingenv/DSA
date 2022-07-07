@@ -1,4 +1,4 @@
-package com.linkedList;
+package LinkedList;
 
 /*
 Reverse a linked list in gourp of given size.

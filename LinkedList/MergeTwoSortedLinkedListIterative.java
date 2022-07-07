@@ -1,4 +1,4 @@
-package com.linkedList;
+package LinkedList;
 
 public class MergeTwoSortedLinkedListIterative {
     public static void main(String args[]){

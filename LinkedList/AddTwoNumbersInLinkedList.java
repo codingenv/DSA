@@ -1,4 +1,4 @@
-package com.linkedList;
+package LinkedList;
 
 import java.sql.PreparedStatement;
 

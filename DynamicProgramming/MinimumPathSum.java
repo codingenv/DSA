@@ -1,4 +1,4 @@
-package com.dynamic.programming;
+package DynamicProgramming;
 
 
 // /* Problem Name is &&& Optimal Path &&& PLEASE DO NOT REMOVE THIS LINE. */
@@ -102,26 +102,3 @@ package com.dynamic.programming;
      }
    }
  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-public class MinimumPathSum {
-
-}

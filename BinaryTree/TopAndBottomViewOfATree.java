@@ -1,4 +1,4 @@
-package com.practice.binary.tree;
+package BinaryTree;
 
 import java.util.ArrayDeque;
 import java.util.Map;

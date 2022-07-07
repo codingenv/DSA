@@ -1,4 +1,4 @@
-package com.HashMap;
+package HashMap;
 
 import com.GeneralUtils.Utility;
 

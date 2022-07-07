@@ -1,4 +1,4 @@
-package com.sorting;
+package Sorting;
 
 /*
 time complexity: O(n*log(n))

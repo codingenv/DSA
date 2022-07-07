@@ -1,4 +1,4 @@
-package com.linkedList;
+package LinkedList;
 
 public class NthNodeFromEndOfThelinkedList {
     public static void main(String args[]){

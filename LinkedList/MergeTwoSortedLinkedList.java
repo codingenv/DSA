@@ -1,4 +1,4 @@
-package com.linkedList;
+package LinkedList;
 
 /*
 Merge two sorted linked list

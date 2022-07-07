@@ -1,4 +1,4 @@
-package com.practice.binary;
+package BinaryTree;
 
 /*
 A complete binary tree can be represented in an array in

@@ -1,4 +1,4 @@
-package com.searching;
+package Searching;
 
 /*
     ideal block size should be  = sqrt of (length of array)

@@ -1,4 +1,4 @@
-package com.linkedList;
+package LinkedList;
 
 public class CopyALinkedListIntoOtherLinkedList {
     public static void main(String [] args){

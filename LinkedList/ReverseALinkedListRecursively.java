@@ -1,4 +1,4 @@
-    package com.linkedList;
+    package LinkedList;
 
 public class ReverseALinkedListRecursively {
 

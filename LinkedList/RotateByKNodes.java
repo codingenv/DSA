@@ -1,4 +1,4 @@
-package com.linkedList;
+package LinkedList;
 
 /*
 Rotate a given linked list counterclockwise by k nodes.

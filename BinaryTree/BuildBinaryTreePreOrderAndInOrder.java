@@ -1,4 +1,4 @@
-package com.practice.binary;
+package BinaryTree;
 
 import java.util.HashMap;
 import java.util.Map;

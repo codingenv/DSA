@@ -1,4 +1,4 @@
-package com.searching;
+package Searching;
 
 /*
 https://www.youtube.com/watch?v=GTJr8OvyEVQ

@@ -1,7 +1,6 @@
-package com.practice.binary;
+package BinaryTree;
 
 
-<<<<<<< HEAD
 /*
 Tree
             10

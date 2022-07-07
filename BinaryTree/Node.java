@@ -1,4 +1,4 @@
-package com.practice.binary;
+package BinaryTree;
 
 /*
 Contains the basic method to create, display the tree.

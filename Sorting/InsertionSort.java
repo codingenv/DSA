@@ -1,4 +1,4 @@
-package com.sorting;
+package Sorting;
 
 /*
 The worst case time complexity of Insertion sort is O(N^2)

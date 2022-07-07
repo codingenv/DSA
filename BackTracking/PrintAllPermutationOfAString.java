@@ -1,4 +1,4 @@
-package com.backtracking;
+package BackTracking;
 
 public class PrintAllPermutationOfAString {
 

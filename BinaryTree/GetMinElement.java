@@ -1,4 +1,4 @@
-package com.practice.binary;
+package BinaryTree;
 
 public class GetMinElement {
     public static void main(String args[]){

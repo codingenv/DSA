@@ -1,4 +1,4 @@
-package com.binarysearchtree;
+package BinarySearchTree;
 
 public class CountNodesInRange {
 

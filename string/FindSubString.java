@@ -1,4 +1,4 @@
-package com.string;
+package string;
 
 /*
 Finding sub string in a given string in time complexity 

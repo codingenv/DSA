@@ -1,4 +1,4 @@
-package com.practice.binary;
+package BinaryTree;
 
 /*
 Given sequence:
