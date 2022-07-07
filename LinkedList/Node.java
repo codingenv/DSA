@@ -11,9 +11,9 @@ public class Node {
 
     Node (){}
 
-    Node (int data, Node next){
+    Node (int data, Node node){
         this.data = data;
-        this.next = next;
+        this.next = node;
     }
 
     // Basic opertation
@@ -111,6 +111,15 @@ public class Node {
         head.next.next.next.next.next.next = new Node(7);
         head.next.next.next.next.next.next.next = new Node(8);
         head.next.next.next.next.next.next.next.next = head.next.next.next.next;
+        return head;
+    }
+
+    public static Node convertArrayToLinkedList(int [] arr){
+        Node head = null;
+        int len = arr.length;
+        for(int i = 0; i< len; i++){
+            head = addAtEndOfLinkedList(head, arr[i]);
+        }
         return head;
     }
 
