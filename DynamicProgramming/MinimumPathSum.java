@@ -13,7 +13,7 @@ package DynamicProgramming;
  **     You have been given a grid filled with numbers, representing the number of
  **     rare rocks available in various cities across the country.  Your objective
  **     is to find the optimal path from So_Cal to New_York that would allow you to
- **     accumulate the most rocks along the way.
+ **     accumulate the least rocks along the way.
  **
  **     Note: You can only travel either north (up) or east (right).
  **  2) Consider adding some additional tests in doTestsPass().
@@ -24,10 +24,10 @@ package DynamicProgramming;
  **                  {0,1,1,1,0},                         < W   E >
  **   So_Cal (start) {2,0,0,0,0}}                             S
  **                                                           v
- **   The total for this example would be 10 (2+0+1+1+1+0+5).
+ **   The total for this example would be 7 (2+0+0+0+0+0+5).
  */
 
- class Solution {
+ class MinimumPathSum {
    /*
     **  Find the optimal path.
     */
@@ -49,17 +49,19 @@ package DynamicProgramming;
 
        int [][]dp = new int[row][col];
 
-       for(int i = row -1; i>=0; i-- ){
+       for(int i = 0; i <= row-1; i++ ){
          for(int j = col-1; j>= 0; j--){
 
-           if(i == row-1 && j == 0){
+             System.out.println("i = " + i + ", j = " + j  );
+
+           if(i == 0 && j == col -1){
               dp[i][j] = grid[i][j];
-           }else if( i == row-1){
+           }else if( i == 0){
              dp[i][j] = dp[i][j+1] + grid[i][j];
-           }else if( j == 0){
+           }else if( j == col -1){
                dp[i][j] = dp[i-1][j] + grid[i][j];
            }else{
-                dp[i][j] = Math.min(dp[i-1][j], dp[i][j+1]);
+                dp[i][j] = Math.min(dp[i-1][j], dp[i][j+1]) + grid[i][j];
            }
 
          }
@@ -74,8 +76,8 @@ package DynamicProgramming;
 
        System.out.println();
 
-        System.out.println(dp[0][col-1]);
-        return dp[0][col-1];
+        System.out.println(dp[row-1][0]);
+        return dp[row -1][0];
    }
 
    /*
@@ -87,7 +89,7 @@ package DynamicProgramming;
      result &= optimalPath(new int[][]{
          {0, 0, 0, 0, 5},
          {0, 1, 1, 1, 0},
-         {2, 0, 0, 0, 0}}) == 10;
+         {2, 0, 0, 0, 0}}) == 7;
      return result;
    }
 

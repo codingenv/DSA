@@ -1,1 +1,1 @@
-1. Minimum path Sum: Goldman Sachs
+1. Minimum/maximum path Sum: Goldman Sachs
