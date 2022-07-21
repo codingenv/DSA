@@ -1,5 +1,11 @@
 package Array;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 /*
 Walmart:
 Given a String like 1,1,2,2,3,4,2,2,2,2,2,2,7,8,9,10 print range of a number
@@ -8,40 +14,31 @@ Example: 1,1,2,2,3,4,2,2,2,2,2,2,7,8,9,1 Answer: 6,11 (2 repeated most number
 of times from index 6 to 11)
  */
 public class FindMaxRange {
-    public static void main(String [] args){
-        int arr[] = {1,1,2,2,3,4,2,2,2,2,2,2,8,9};
+    public static void main(String [] args) {
+        int a[] = {1, 1, 2, 2, 3, 2, 2, 2, 2, 2, 2, 8, 9};
+        int prev = a[0];
+        int count = 0;
+        int index = 0;
+        int iniIndex = -1;
+        int maxCount = 0;
 
-        int currentlength = 0;
-        int prevlength = 0;
+        for(int i = 1; i< a.length; i++ ) {
+            if (prev == a[i]) count++;
+            else {
+                count = 1;
+                prev = a[i];
+                index = i;
+            }
 
-        int currentStartIndex  = 0;
-        int prevStartIndex = 0;
-
-        int prevEndIndex = 0;
-        int currentEndIndex  = 0;
-
-        for(int i = 0, j = 1; i < arr.length && j <arr.length;  ){
-
-            if(arr[i] == arr[j]){
-                currentlength = currentEndIndex +1;
-                if(currentStartIndex == 0){
-                    currentStartIndex = i;
-                }
-                if(currentEndIndex ==0){
-                    currentEndIndex = j;
-                }
-
-                if(currentlength > prevlength){
-
-                    prevlength = currentlength;
-                }
-                j++;
-            }else{
-                i++;
-                j++;
+            if (count > maxCount) {
+                maxCount = count;
+                iniIndex = index;
             }
         }
-        System.out.println(currentStartIndex);
-        System.out.println(currentEndIndex);
+
+        System.out.println("Max Count : " + maxCount);
+        System.out.println("Initial Index : " + iniIndex);
+        System.out.println("Max Index : " + (iniIndex + maxCount));
+        System.out.println("Value " + a[iniIndex]);
     }
 }
