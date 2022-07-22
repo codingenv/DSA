@@ -15,6 +15,7 @@ public class FrogJump {
 
         System.out.println(memoizationWay(n, a,dp));
         System.out.println(tebulizationWay(n, a));
+        System.out.println(spaceOptimizationWay(n, a));
     }
 
     static int recursiveWay(int n, int a[]){
@@ -51,7 +52,17 @@ public class FrogJump {
 
 
     static int spaceOptimizationWay(int n, int a[]){
-        return 0;
+        int prev = 0;
+        int prev2 = 0;
+        for (int i =1; i<n;i++){
+            int fs = prev + Math.abs(a[i] - a[i-1]);
+            int ss = Integer.MAX_VALUE;
+            if(i>1) ss = prev2 + Math.abs(a[i] - a[i-2]);
+            int curr =  Integer.min(fs,ss);
+            prev2 = prev;
+            prev = curr;
+        }
+        return prev;
     }
 
 }
