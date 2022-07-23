@@ -7,6 +7,7 @@ public class MaxSumOfNonAdjacentElement {
         int arr[] = {1,3,2,4,8,3,9};
         System.out.println("Max sum of non adjacent element in java: " + maxSumOfNonAdjacentElement(arr));
         System.out.println("Max sum of non adjacent element in java: " + maxSumOfNonAdjacentElementDp(arr));
+        System.out.println("Max sum of non adjacent element in java: " + maxSumOfNonAdjacentElementDpTabulation(arr));
     }
 
 
@@ -54,4 +55,47 @@ public class MaxSumOfNonAdjacentElement {
         Convert to Tabulation (DP)
      */
 
+    public static int maxSumOfNonAdjacentElementDpTabulation(int arr[]) {
+        int dp[] = new int[arr.length + 1];
+        Arrays.fill(dp, -1);
+
+        dp[0] = arr[0];
+
+
+        for(int i = 1; i< arr.length; i++){
+            int pick = 0;
+            if(i-2 < 0) pick = arr[i] + 0;
+            else pick = arr[i] + dp[i-2];
+            int notPick = 0 + dp[i - 1];
+
+            dp[i] =  Math.max(pick, notPick);
+        }
+        return dp[arr.length -1];
+
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
