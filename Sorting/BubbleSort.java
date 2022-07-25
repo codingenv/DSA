@@ -9,6 +9,9 @@ public class BubbleSort {
         int arr[] = {23,12,43,56,45,34};
         bubbleSort(arr);
         ArrayHelperClass.printArray(arr);
+        int arrRecursive[] = {23,12,43,56,45,34};
+        bubbleSort(arrRecursive);
+        ArrayHelperClass.printArray(arrRecursive);
     }
 
     public static void bubbleSort(int [] arr){
@@ -20,6 +23,21 @@ public class BubbleSort {
                     ArrayHelperClass.swap(arr, j, j+1);
                 }
             }
+        }
+    }
+
+    public static void bubbleSortRecursive(int n, int arr[]) {
+        if (n == 1) return;
+
+        int count = 0;
+
+        for (int i = 0; i < n - 1; i++) {
+            if (arr[i] > arr[i + 1]) {
+                ArrayHelperClass.swap(arr, i, i + 1);
+                count++;
+            }
+            if (count == 0) return;
+            bubbleSortRecursive(n - 1, arr);
         }
     }
 }
