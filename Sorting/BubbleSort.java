@@ -44,21 +44,16 @@ public class BubbleSort {
 
     private static void bubbleSortAllRecursive(int start, int size, int arr[]) {
         if(start == size) return;
-        if(!recurse(0, size, false, arr)) return;
+
+        recurse(0, size, arr);
         bubbleSortAllRecursive(start, size -1, arr);
+
     }
 
-    private static boolean recurse(int start, int size, boolean swapped, int []arr) {
-        if (start == size - 1) return swapped;
-
-        if (arr[start] > arr[start + 1]) {
-            int temp = arr[start];
-            arr[start] = arr[start + 1];
-            arr[start + 1] = temp;
-
-            swapped = true;
-        }
-        return swapped;
-    }
+    private static void recurse(int start, int size, int []arr) {
+        if (start == size - 1) return ;
+        if (arr[start] > arr[start + 1]) ArrayHelperClass.swap(arr,start, start+1);
+        recurse(start+1, size, arr);
+    
 
 }
