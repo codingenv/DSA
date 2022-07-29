@@ -1,5 +1,9 @@
 package BinaryTree;
 
+/*
+    Total Sum of the tree
+*/
+
 public class BinaryTreeToItsSumTree {
 
 
