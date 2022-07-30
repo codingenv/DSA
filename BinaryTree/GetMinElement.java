@@ -1,5 +1,8 @@
 package BinaryTree;
 
+/*
+Get minimum value of a tree
+*/
 public class GetMinElement {
     public static void main(String args[]){
         Node node = new Node();
