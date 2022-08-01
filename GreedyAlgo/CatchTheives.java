@@ -57,4 +57,63 @@ public class CatchTheives {
         return count;
     }
 
+    /* From Geeks for geeks */
+
+    static int policeThief(char arr[], int n, int k)
+    {
+        int pol = -1, thi = -1, res = 0;
+        for (int i = 0; i < n; i++) {
+            if (arr[i] == 'P') {
+                pol = i;
+                break;
+            }
+        }
+
+        for (int i = 0; i < n; i++) {
+            if (arr[i] == 'T') {
+                thi = i;
+                break;
+            }
+        }
+
+        // return 0 if no police OR no thief found
+        if (thi == -1 || pol == -1)
+            return 0;
+        // loop to increase res iff distance between police
+        // and thief <= k
+        while (pol < n && thi < n) {
+
+            if (Math.abs(pol - thi) <= k) {
+
+                pol++;
+                while (pol < n && arr[pol] != 'P')  pol++;
+
+                thi = thi + 1;
+                while (thi < n && arr[thi] != 'T')  thi++;
+
+                res++;
+            } else if (thi < pol) {
+                // as index of thief is behind police, we
+                // need to find the next thief and check if
+                // it can be caught by the current police
+                // (it will be checked in the next
+                // iteration) Hence, find the index of next
+                // thief
+                thi++;
+                while (thi < n && arr[thi] != 'T') thi++;
+            } else {
+                // as the index of police is behind the
+                // thief, it cannot catch the thief. Hence,
+                // we need the index of next police and
+                // check if it can catch the current thief
+                // (it will be checked in the next
+                // iteration)
+                pol++;
+                while (pol < n && arr[pol] != 'P') pol++;
+            }
+        }
+
+        return res;
+    }
+
 }
