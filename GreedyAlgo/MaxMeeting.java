@@ -1,6 +1,8 @@
 package GreedyAlgo;
 
 
+import java.util.Comparator;
+
 /**There is one meeting room in a firm. There are N meetings in the form of (S[i], F[i]) where
  * S[i] is the start time of meeting i and F[i] is finish time of meeting i. The task is to find the maximum number of meetings
  * that can be accommodated in the meeting room. Print all meeting numbers
@@ -21,8 +23,36 @@ package GreedyAlgo;
 public class MaxMeeting {
 
     class Meeting{
+        int start;
+        int end;
+        int pos;
 
+        Meeting (int start, int end, int pos){
+            this.start = start;
+            this.end = end;
+            this.pos = pos;
+        }
     }
+
+    class MeetingComparator implements Comparator<Meeting>{
+        @Override
+        public int compare(Meeting o1, Meeting o2){
+            if(o1.end > o2.end){
+                return 1;
+            }else if(o1.end < o2.end){
+                return -1;
+            }else if(o1.pos < o2.pos){
+                return -1;
+            }
+            return 1;
+        }
+    }
+
+    public static void findMaxMeeting(int s[], int f[] , int n){
+        
+    }
+
+
 
     public static void main(String [] args){
         int s[] = {1, 3, 0, 5, 8, 5};
