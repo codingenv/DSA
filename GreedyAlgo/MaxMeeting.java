@@ -22,7 +22,7 @@ import java.util.Comparator;
 
 public class MaxMeeting {
 
-    class Meeting{
+        class Meeting{
         int start;
         int end;
         int pos;
@@ -48,15 +48,48 @@ public class MaxMeeting {
         }
     }
 
-    public static void findMaxMeeting(int s[], int f[] , int n){
-        
+    public void findMaxMeeting(int s[], int f[] , int n){
+        List<Meeting> meetingsList = new ArrayList<>();
+
+
+        for(int i = 0; i<n; i++   ){
+            Meeting meeting = new Meeting(s[i], f[i], i+1);
+            meetingsList.add(meeting);
+        }
+
+        MeetingComparator meet = new MeetingComparator();
+
+        //Sort on the basis of end time.
+        Collections.sort(meetingsList, meet);
+
+        List<Integer> result = new ArrayList<>();
+
+        int maxMeeting = 1;
+        int limit  =  meetingsList.get(0).end;
+        result.add(meetingsList.get(0).pos);
+        for(int i =1; i< meetingsList.size(); i++){
+            if(meetingsList.get(i).start > limit){
+                result.add(meetingsList.get(i).pos);
+                limit = meetingsList.get(i).end;
+            }else{
+                //Skip this
+            }
+        }
+
+        for(int i =0; i<result.size(); i++){
+            System.out.println(result.get(i));
+        }
+
+
     }
 
-
-
     public static void main(String [] args){
-        int s[] = {1, 3, 0, 5, 8, 5};
-        int f[] = {2, 4, 6, 7, 9, 9};
+        //int s[] = {1, 3, 0, 5, 8, 5};
+        //int f[] = {2, 4, 6, 7, 9, 9};
 
+        int s[] = {75250, 50074, 43659, 8931, 11273, 27545, 50879, 77924};
+        int f[] = {112960, 114515, 81825, 93424, 54316, 35533, 73383, 160252 };
+        MaxMeeting obj = new MaxMeeting();
+        obj.findMaxMeeting(s, f, s.length);
     }
 }
