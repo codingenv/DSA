@@ -16,11 +16,13 @@ public class KadanesAlgo {
         int maxSumSoFar = 0;
         int si = 0;
         int ei = 0;
+        int startIndex =0;
 
         for(int i = 0; i< n; i++){
             maxSumSoFar = maxSumSoFar + arr[i];
             if(maxSumSoFar> maxSum){
                 maxSum = maxSumSoFar;
+                startIndex = si;
                 ei = i;
             }
 
@@ -31,7 +33,7 @@ public class KadanesAlgo {
         }
 
         System.out.println("Max Sum: " + maxSum );
-        System.out.println("Start index: " + si );
+        System.out.println("Start index: " + startIndex );
         System.out.println("End index: " + ei );
 
     }
