@@ -44,7 +44,7 @@ public class MaxSumOfNonAdjacentElement {
 
         if(dp[index] != -1) return dp[index];
 
-        int pick = arr[index] + findMaxSum(index -2, arr);
+        int pick = arr[index] + findMaxSum(index -2, arr, dp);
         int notPick = 0 + findMaxSumDp(index-1,arr,dp);
 
         dp[index] =  Math.max(pick, notPick);
