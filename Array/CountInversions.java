@@ -63,6 +63,7 @@ public class CountInversions {
         for (i = left, k = 0; i <= right; i++, k++) {
             arr[i] = temp[k];
         }
+		
 
         return invCount;
     }
