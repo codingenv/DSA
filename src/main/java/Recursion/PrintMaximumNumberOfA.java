@@ -1,4 +1,4 @@
-package BackTracking;
+package Recursion;
 
 public class PrintMaximumNumberOfA {
 
