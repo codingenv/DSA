@@ -6,13 +6,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/*
-Walmart:
-Given a String like 1,1,2,2,3,4,2,2,2,2,2,2,7,8,9,10 print range of a number
-which is repeated most number of times continiuously.
-Example: 1,1,2,2,3,4,2,2,2,2,2,2,7,8,9,1 Answer: 6,11 (2 repeated most number
-of times from index 6 to 11)
- */
 public class FindMaxRange {
     public static void main(String [] args) {
         int a[] = {1, 1, 2, 2, 3, 2, 2, 2, 2, 2, 2, 8, 9};
